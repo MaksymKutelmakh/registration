@@ -1,0 +1,47 @@
+<div class="update-todo" *ngIf="showEditor">
+    <div class="todo-title">
+        <label>Title</label>
+        <input type="text" [formControl]="toDoTitle"/>
+    </div>
+    <button class="btn btn-primary" (click)="updateToDo()">Update todo</button>
+</div>
+<div class="card text-center m-3" *ngIf="toDoList && toDoList.length">
+    <h3 class="card-header">ToDo</h3>
+    <div class="list">
+            <div class="card-block" *ngFor="let item of toDoList | paginate: { itemsPerPage: 10, currentPage: p }" 
+                (mouseenter)="focusedRow = item" (mouseleave)="focusedRow = null">
+                <div class="title-block">
+                    Title:
+                    <span class="title">
+                        {{item.title}} 
+                    </span>
+                </div>
+                <div class="completed-task">
+                    Completed:
+                    <span class="completed">
+                        {{item.completed}} 
+                    </span>
+                </div>
+                <div class="delete-icon" (click)="$event.stopPropagation(); deleteToDo(item)"
+                      [ngClass]="{ showDelete : focusedRow === item}"
+                >
+                <i class="fa fa-trash"></i>
+              </div>
+              <div class="edit-icon" (click)="$event.stopPropagation(); updateToDo(item)"
+                      [ngClass]="{ showDelete : focusedRow === item}"
+                >
+                <i class="far fa-edit"></i>
+              </div>
+	</div>
+
+		<pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+</div>
+
+<div class="new-todo">
+    <div class="todo-title">
+        <label>Title</label>
+        <input type="text" [formControl]="toDoTitle"/>
+    </div>
+    <button class="btn btn-primary" (click)="createToDo()">Create todo</button>
+</div>

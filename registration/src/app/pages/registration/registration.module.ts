@@ -1,4 +1,7 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 import { RegistrationComponent } from './registration-component/registration.component';
 
 
@@ -7,6 +10,10 @@ import { RegistrationComponent } from './registration-component/registration.com
     RegistrationComponent
   ],
   imports: [
+    CommonModule,
+    BrowserModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   exports: [
     RegistrationComponent

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { RegistrationComponent } from './pages/registration/registration-component/registration.component';
-import { UsersComponent } from './pages/users/users-component/users.component';
+import { ToDoListComponent } from './pages/todo-list/todo-list-component/todo-list.component';
 
 
 const routes: Routes = [
@@ -15,8 +15,8 @@ const routes: Routes = [
     component: RegistrationComponent
   },
   {
-    path: 'users',
-    component: UsersComponent
+    path: 'todo',
+    component: ToDoListComponent
   },
 ];
 

@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RegistrationModule } from './registration/registration.module';
-import { UsersModule } from './users/users.module';
+import { ToDoListModule } from './todo-list/todo-list.module';
 
 
 @NgModule({
   imports: [
-    UsersModule,
+    ToDoListModule,
     RegistrationModule
   ],
   declarations: [
   ],
   exports: [
-    UsersModule,
+    ToDoListModule,
     RegistrationModule
   ],
   providers: [

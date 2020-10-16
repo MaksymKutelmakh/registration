@@ -1,0 +1,55 @@
+.card-block {
+    display: flex;
+    width: 100%;
+    border-bottom: 2px solid #c4c4c4;
+    align-items: center;
+    padding: 20px;
+    .title-block {
+        margin-right: 5px;
+        width: 30%;
+        text-align: start !important;
+    }
+    .completed-task {
+        width: 20%;
+    }
+    .delete-icon,
+    .edit-icon {
+        width: 20%;
+        visibility: hidden;
+        cursor: pointer;
+        color: tomato;
+    }
+
+    .edit-icon {
+        color: black;
+    }
+}
+
+.showDelete {
+    visibility: visible !important;
+}
+
+.new-todo {
+    padding: 20px;
+    .todo-title {
+        display: flex;
+        width: 14%;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+        input {
+            margin-left: 5px;
+            display: block;
+            width: 100%;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: .25rem;
+            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+        }
+    }
+}
